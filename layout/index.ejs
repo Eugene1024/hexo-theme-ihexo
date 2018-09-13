@@ -1,0 +1,21 @@
+<style>
+.posts a {
+color:#000;
+}
+</style>
+<section class="posts">
+<h1>Articles</h1>
+<% page.posts.each(function (post) { %>
+<article class="post">
+  <div class="post-title">
+   <h3> <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %> </a>      <div class="post-time"><%- date(post.date, "YYYY-MM-DD") %></div></h3>
+ </div>
+
+</article>
+<% }) %>
+
+<second class="second">
+ 
+
+</second>
+</section>
